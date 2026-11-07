@@ -6,6 +6,7 @@
   <title>Routine Notebook</title>
   <link rel="stylesheet" href="style.css">
   <script defer src="app.js"></script>
+  <script defer src="analysis.js"></script>
 </head>
 <body>
   <header class="mast">
@@ -51,6 +52,21 @@
       </section>
     </div>
     <p id="status" role="status" aria-live="polite"></p>
+    <section class="analysis" aria-labelledby="analysis-heading">
+      <h2 id="analysis-heading">Photo analysis</h2>
+      <p>Send a well-lit, front-facing JPEG or PNG to YouCam for cosmetic skin observations. Use a photo with a short side of at least 480 pixels, a long side up to 4096 pixels, and a file size below 10 MiB.</p>
+      <p id="analysis-service" role="status">Start the local server with npm start to connect YouCam.</p>
+      <label for="skin-photo">Choose your photo</label>
+      <input id="skin-photo" type="file" accept="image/jpeg,image/png">
+      <img id="skin-preview" alt="Your selected photo" hidden>
+      <label class="analysis-consent"><input id="skin-consent" type="checkbox"> I have permission to use this photo and agree to send it to YouCam for analysis.</label>
+      <button id="skin-start" type="button" disabled>Analyze photo</button>
+      <button id="skin-resume" type="button" class="plain" hidden>Check previous analysis</button>
+      <p id="analysis-status" role="status"></p>
+      <div id="analysis-results"></div>
+      <button id="skin-export" type="button" class="plain" hidden>Download analysis JSON</button>
+      <p>These image-based observations are for skincare use. Discuss health concerns with a qualified clinician.</p>
+    </section>
   </main>
   <footer>A private journal for personal observations.</footer>
 </body>

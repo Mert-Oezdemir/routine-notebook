@@ -39,6 +39,13 @@ li .actions { display: flex; gap: .45rem; margin-top: .6rem; }
 li button { font-size: .79rem; }
 #status { min-height: 1.55em; }
 footer { padding: 0 0 2rem; }
+.analysis { margin: 1.5rem 0 2rem; padding: clamp(1.15rem, 3vw, 2.35rem); background: white; border: 1px solid var(--line); border-radius: .6rem; }
+.analysis p { max-width: 72ch; }
+.analysis > input { margin: .6rem 0; }
+.analysis-consent { display: block; margin: 1rem 0; line-height: 1.6; }
+#skin-preview { display: block; max-width: min(100%, 22rem); max-height: 22rem; object-fit: contain; margin: 1rem 0; }
+#skin-preview[hidden] { display: none; }
+#analysis-results pre { white-space: pre-wrap; overflow-wrap: anywhere; }
 @media (max-width: 46rem) {
   .notebook { grid-template-columns: 1fr; }
   .entry { border-right: 0; border-bottom: 1px solid var(--line); }
